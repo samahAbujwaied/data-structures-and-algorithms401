@@ -4,7 +4,8 @@
   "description": "| assignment | Links | |------------|-------| |Code Challenge1| [array-reverse](https://github.com/samahAbujwaied/data-structures-and-algorithms401/tree/array-reverse) |Code Challenge2| [array-insert-shift](https://github.com/samahAbujwaied/data-structures-and-algorithms401/tree/array-insert-shift)",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage --verbose",
+    "start":"node"
     
   },
   "repository": {

@@ -5,64 +5,77 @@ const Node = require('./node');
 class LinkedList {
   constructor () {
     this.head = null;
+    console.log(`from constructor ${this.head}`);
   }
   insert(value){
     try {
       this.head = new Node(value) ;
+      console.log(`from insert ${this.head}`);
     }
     catch(error) {
-      console.error('your error:',error);
+      console.error(`Error while inserting ${error}`);
     }
   }
+
   include(value){
-
     try {
-      let boolean = false ;
-      let check = this.head;
-      while(check){
-        if( check.value === value){
-          boolean =true ;
-          console.log('does is exist ?', boolean);
-          return boolean;
+      let bool = false ;
+      let test = this.head;
+      console.log(`test ${this.head}`);
+      while(test){
+        if( test.value == value){
+          bool =true ;
+          console.log(`inclouding side ${bool}`);
+          return bool;
         }
-        check = check.next;
+        test = test.next;
       }
-
-      console.log('does is exist ?', boolean);
-      return boolean ;
+      console.log(`inclouding side ${bool}`);
+      return bool;
     }
 
     catch(error) {
-      console.error('your error:',error);
+      console.error(`Error while searching ${error}`);
     }
-
   }
 
   toString(){
     try {
-      let array = [];
+      let linkedArr = [];
       let head = this.head ;
       while(head){
-        array.push( '{ ');
-        array.push(head.value);
-        array.push(' }');
-        array.push(' -> ');
+        linkedArr.push( '{ ');
+        linkedArr.push(head.value);
+        linkedArr.push(' }');
+        linkedArr.push(' -> ');
         head=head.next ;
       }
-
-      array.unshift('"');
-      array.push('NULL"');
-      let newArray= array.join('');
+      linkedArr.unshift('"');
+      linkedArr.push('NULL"');
+      let newArray= linkedArr.join('');
       console.log(newArray);
       return newArray;
     }
 
     catch(error) {
-      console.error('your error:',error);
+      console.error(`Error while convering ${error}`);
     }
   }
 
 
 }
+let newlink = new LinkedList();
+console.log(`the head of linked list ${newlink}`);
+  
+    let val1 = 'samah';
+    let val2 = 'roqaia'  
+    let val3 = 'rawan'
+    newlink.insert(val1);
+    newlink.insert(val2);
+    newlink.insert(val3);
+    console.log(newlink);
+    newlink.include('rawan')
+    newlink.toString();
 
+   
 module.exports = LinkedList ;
