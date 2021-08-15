@@ -1,39 +1,27 @@
 'use strict'
 const Node=require('./node');
-
 class linkedList{
     constructor(){
         this.head=null;
     }
-
     append(value) {
-        let current = this.head;
+        let cur = this.head;
       console.log('value',value);
-        while (current) {
-         
-          if (current.next === null) {
-            current.next = new Node(value);
-            console.log(current.next);
+        while (cur) {
+          if (cur.next === null) {
+            console.log(cur.next);
+            cur.next = new Node(value);
+            console.log(cur.next);
             return;
           }
-          current = current.next;
-         
+          cur = cur.next;
         }
-      }
-      // insert(value){
-      //   let node=new Node(value);
-      //   if(!this.head){
-      //     this.head=node;
-      //   }else{
-      //     node.next=this.head;
-      //     this.head=node;
-      //   }
-      // }
+      }  
 
       insert(value){
         try {
           this.head = new Node(value) ;
-          console.log(`from insert ${this.head}`);
+          console.log(`insert ${this.head}`);
         }
         catch(error) {
           console.error(`Error while inserting ${error}`);
@@ -41,24 +29,24 @@ class linkedList{
       }
 
       includes(value) {
-        let current = this.head;
-        while (current) {
-          if (value === current.value) {
+        let cur = this.head;
+        while (cur) {
+          if (value === cur.value) {
             return true;
-          } else if (current.next === null) {
+          } else if (cur.next === null) {
             return false;
           } else {
-            current = current.next;
+            cur = cur.next;
           }
         }
       }
     
       toString() {
-        let current = this.head;
+        let cur= this.head;
         let string = '';
-        while (current) {
-          let stringTwo = current.value;
-          current = current.next;
+        while (cur) {
+          let stringTwo = cur.value;
+          cur = cur.next;
           string += `{${stringTwo}} -> `;
         }
         string += '{null}';
@@ -67,35 +55,35 @@ class linkedList{
     
      
       
-      insertBefore(value, newValue) {
-    let current = this.head;
+    insertBefore(value, newValue) {
+    let cur = this.head;
     let newNode = new Node(newValue);
-    while (current.next !== null) {
-      if (current.value === value) {
-        newNode.next = current;
+    while (cur.next !== null) {
+      if (cur.value === value) {
+        newNode.next = cur;
         this.head = newNode;
-      } else if (current.next.value === value) {
-        let temp = current.next;
-        current.next = newNode;
+      } else if (cur.next.value === value) {
+        let temp = cur.next;
+        cur.next = newNode;
         newNode.next = temp;
         return;
       }
-      current = current.next;
+      cur = cur.next;
     }
 
   }
   insertAfter(value, newValue){
     let node=new Node(newValue);
     if(this.head){
-      let current=this.head;
-      while(current){
-        if(current.value===value){
-          let temp=current.next;
-          current.next=node;
+      let cur=this.head;
+      while(cur){
+        if(cur.value===value){
+          let temp=cur.next;
+          cur.next=node;
           node.next=temp;
           return ;
         }
-        current=current.next;
+        cur=cur.next;
       }
     }
     return ;
@@ -112,11 +100,11 @@ console.log(`the head of linked list ${newlink}`);
     let val1 = 'rawan';
     let val2 = 'roqaia'  
     let val3 = 'samah'
-    // newlink.insert(val1);
-    // newlink.insert(val2);
-    // newlink.insert(val3);
-    // console.log(`new ${newlink}`);
-    // console.log('newlink',newlink.toString());
-    // newlink.include('rawan')
-    // newlink.toString();
+    newlink.insert(val1);
+    newlink.insert(val2);
+    newlink.insert(val3);
+    console.log(`new ${newlink}`);
+    console.log('newlink',newlink.toString());
+    newlink.includes('rawan')
+    newlink.toString();
 module.exports=linkedList;
