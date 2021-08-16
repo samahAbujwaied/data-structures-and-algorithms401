@@ -89,6 +89,24 @@ class linkedList{
     return ;
   }
 
+  kthFromEnd(k = 0) {
+    if(isNaN(k))
+     { throw new Error('Invalid K'); }
+    if(this.size < k || k < 0) 
+    { throw new Error('k is not found'); }
+    if(!this.size) 
+    { throw new Error('not have a nodes in linked list'); }
+    if(this.size === 1 || this.size === k) 
+    { return this.head.value; }
+    let cur = this.head;
+    let res = this.head.value;
+    for(let i = 0; i < (this.size - k); i++) {
+      res = cur.value;
+      cur = cur.next;
+    }
+    return res;
+  }
+
 }
 
 let newlink = new linkedList();

@@ -41,5 +41,9 @@ describe('test on Linked Lists',()=>{
     linkedList.insertAfter(1, 0);
     expect(linkedList.toString()).toEqual('{3} -> {7} -> {null}');
   });
+  it('add node on the end', ()=> {
+    linkedList.kthFromEnd();
+    expect(linkedList.kthFromEnd()).toBeTruthy();
+  });
    
 });
