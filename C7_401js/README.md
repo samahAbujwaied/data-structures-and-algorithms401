@@ -4,7 +4,7 @@
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
 ![](../C7_401js/img/linked.png)
-![](../C7_401js/img/test.png)
+
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
