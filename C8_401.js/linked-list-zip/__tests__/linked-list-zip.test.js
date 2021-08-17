@@ -13,61 +13,62 @@ describe('zip linked list', () => {
   it('The two linked list the same length', () => {
     const linkedlist1 = new LinkedList();
     const linkedlist2 = new LinkedList();
-    const ll3 = new LinkedList();
-
-    linkedlist1.insert(100);
-    linkedlist1.insert(200);
-
-    linkedlist2.insert(300);
-    linkedlist2.insert(400);
-
-    ll3.insert(100);
-    ll3.insert(300);
-    ll3.insert(200);
-    ll3.insert(400);
-
-    expect(zipList(linkedlist1, linkedlist2).toString()).toEqual(ll3.toString());
+    const linkedlist13 = new LinkedList();
+  
+    //////////////////////////////////////////////////////
+    linkedlist1.insert(1);
+    linkedlist1.insert(2);
+    //////////////////////////////////////////////////////
+    linkedlist2.insert(3);
+    linkedlist2.insert(4);
+    //////////////////////////////////////////////////////
+    linkedlist13.insert(1);
+    linkedlist13.insert(3);
+    linkedlist13.insert(2);
+    linkedlist13.insert(4);
+   
+    expect(zipList(linkedlist1, linkedlist2).toString()).toEqual(linkedlist13.toString());
   });
   it('The two linked list different length , linkedlist1Length < linkedlist2Length', () => {
     const linkedlist1 = new LinkedList();
     const linkedlist2 = new LinkedList();
-    const ll3 = new LinkedList();
+    const linkedlist13 = new LinkedList();
+     //////////////////////////////////////////////////////
 
-    linkedlist1.insert(100);
-    linkedlist1.insert(200);
+    linkedlist1.insert(1);
+    linkedlist1.insert(2);
+     //////////////////////////////////////////////////////
 
-    linkedlist2.insert(300);
-    linkedlist2.insert(400);
-    linkedlist2.insert(500);
+    linkedlist2.insert(3);
+    linkedlist2.insert(4);
+     //////////////////////////////////////////////////////
 
-    ll3.insert(100);
-    ll3.insert(300);
-    ll3.insert(200);
-    ll3.insert(400);
-    ll3.insert(500);
+    linkedlist13.insert(1);
+    linkedlist13.insert(3);
+    linkedlist13.insert(2);
+    linkedlist13.insert(4);
+     //////////////////////////////////////////////////////
 
-    expect(zipList(linkedlist1, linkedlist2).toString()).toEqual(ll3.toString());
+  
+
+    expect(zipList(linkedlist1, linkedlist2).toString()).toEqual(linkedlist13.toString());
   });
   it('The two linked list different length , linkedlist1Length > linkedlist2Length', () => {
     const linkedlist1 = new LinkedList();
     const linkedlist2 = new LinkedList();
-    const ll3 = new LinkedList();
-
-    linkedlist1.insert(100);
-    linkedlist1.insert(200);
-    linkedlist1.insert(500);
-    linkedlist1.insert(600);
-
-    linkedlist2.insert(300);
-    linkedlist2.insert(400);
-
-    ll3.insert(100);
-    ll3.insert(300);
-    ll3.insert(200);
-    ll3.insert(400);
-    ll3.insert(500);
-    ll3.insert(600);
-
-    expect(zipList(linkedlist1, linkedlist2).toString()).toEqual(ll3.toString());
+    const linkedlist13 = new LinkedList();
+    //////////////////////////////////////////////////////
+    linkedlist1.insert(1);
+    linkedlist1.insert(2);
+    //////////////////////////////////////////////////////
+    linkedlist2.insert(3);
+    linkedlist2.insert(4);
+    ////////////////////////////////////////////////////// 
+    linkedlist13.insert(1);
+    linkedlist13.insert(3);
+    linkedlist13.insert(2);
+    linkedlist13.insert(4);
+     //////////////////////////////////////////////////////
+    expect(zipList(linkedlist1, linkedlist2).toString()).toEqual(linkedlist13.toString());
   });
 });
