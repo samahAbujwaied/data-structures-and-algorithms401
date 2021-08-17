@@ -41,9 +41,32 @@ describe('test on Linked Lists',()=>{
     linkedList.insertAfter(1, 0);
     expect(linkedList.toString()).toEqual('{3} -> {7} -> {null}');
   });
-  it('add node on the end', ()=> {
+
+  it('add node on the end kthFromEnd', ()=> {
     linkedList.kthFromEnd();
     expect(linkedList.kthFromEnd()).toBeTruthy();
   });
-   
+   it('kthFromEnd(k)',()=>{
+        
+       linkedList.insert('4');
+        expect(linkedList.kthFromEnd(1)).toEqual('longer than the linkedList ');
+    });
+
+    it('Where k is not a positive integer',()=>{
+        
+      linkedList.insert(-1);
+        expect(linkedList.kthFromEnd(-1)).toEqual('not valid');
+    });
+
+    it('Where the linked list is of a size 1',()=>{
+       
+        linkedList.insert(1);
+        expect(linkedList.kthFromEnd(1)).toEqual(1);
+    });
+    
+    it('Where k and the length of the list are the same',()=>{
+       
+      linkedList.insert(2);
+        expect(linkedList.kthFromEnd(2)).toEqual(2);
+    });
 });
