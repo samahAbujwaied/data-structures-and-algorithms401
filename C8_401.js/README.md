@@ -25,4 +25,4 @@ npm run test
 
 ##### Whiteboard :
 
-![whiteboard](../C8_401.js/img/code8.png)
+![whiteboard](./img/zip-linkedlist.png)
