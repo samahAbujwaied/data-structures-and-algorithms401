@@ -1,49 +1,54 @@
-'use strict'
+"use strict";
 
-class Queue {
-    constructor(item) {
-        this.item = item;
-        this.Arr = [];
+const Stack=require('./stack');
+
+class Queue{
+    constructor(){
+        this.poptoStack = new Stack();
+        this.pushtoStack = new Stack();
+        this.size = 0;
     }
-    enqueue(item) {
-        if (this.Arr.length >= 0) {
-            this.Arr.push(item)
+    enqueue(data){
+        this.pushtoStack.push(data);
+        this.size = this.pushtoStack.length + this.poptoStack.length;
+    }
+    dequeue(){
+        if (this.poptoStack.length > 0) {
+            this.size = this.pushtoStack.length + this.poptoStack.length - 1;
+            return this.poptoStack.pop();
         }
-    }
 
-    dequeue() {
-        if (this.Arr.length > 0) {
-            let data = this.Arr.shift()
+        while(this.pushtoStack.length > 0) {
+            this.poptoStack.push(this.pushtoStack.pop())
+        }
+
+        this.size = this.pushtoStack.length + this.poptoStack.length - 1;
+        return this.poptoStack.pop();
+    }
+    
+    peek(){
+        let data;
+        if (this.front) {
+            data=this.front.data;
             return data
-        } else {
-            return 'Exception'
         }
+        throw new Error('queue is empty'); 
     }
 
-    peek() {
-        let data = this.Arr
-        return data
-    }
-    isEmpty() {
-        if (!this.Arr.length > 0) {
-            return true
-        } else {
-            return false
+    isEmpty(){
+        if(!this.front){
+            throw new Error('queue is empty'); 
         }
+        return 'done....!'
     }
-
+    
 }
 
-/* -----------Test if work well --------*/
-const queue = new Queue();
-console.log(queue.isEmpty())
-queue.enqueue(1)
-queue.enqueue(2)
-queue.peek()
-queue.enqueue(2)
-queue.dequeue()
-queue.dequeue()
-queue.peek()
-console.log(queue.isEmpty())
+let queue = new Queue();
+queue.enqueue('a');
+queue.enqueue('b');
+queue.enqueue('c');
 
-module.exports = Queue
+console.log(queue);
+
+module.exports=Queue;
