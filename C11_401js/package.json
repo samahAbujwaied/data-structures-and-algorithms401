@@ -1,32 +1,16 @@
 {
   "name": "data-structures-and-algorithms401",
   "version": "1.0.0",
-  "description": "| assignment | Links | |------------|-------| |Code Challenge1| [array-reverse](https://github.com/samahAbujwaied/data-structures-and-algorithms401/tree/array-reverse) |Code Challenge2| [array-insert-shift](https://github.com/samahAbujwaied/data-structures-and-algorithms401/tree/array-insert-shift)",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --coverage --verbose",
-    "start":"node"
-    
+  "description": "",
+  "main": "node.js",
+  "dependencies": {
+    "jest": "^27.0.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/samahAbujwaied/data-structures-and-algorithms401.git"
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose --coverage"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/samahAbujwaied/data-structures-and-algorithms401/issues"
-  },
-  "homepage": "https://github.com/samahAbujwaied/data-structures-and-algorithms401#readme",
-  "dependencies": {
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "jest": "^27.0.6",
-    "pg": "^8.7.1",
-    "sequelize": "^6.6.5",
-    "sequelize-cli": "^6.2.0",
-    "sqlite": "^4.0.23",
-    "supertest": "^6.1.5"
-  }
+  "license": "ISC"
 }
