@@ -3,7 +3,6 @@
 const Stack = require ('./stack');
 function bracket(string) {
     if (!string) return false;
-
     let bracketsArray = [];
      console.log('string--->',string);
     let split = string.split('');
@@ -14,16 +13,12 @@ function bracket(string) {
         if (split[i] === '{') bracketsArray.push(2);
         if (split[i] === '}') bracketsArray.push(-2);
         if (split[i] === '[') bracketsArray.push(3);
-        if (split[i] === ']') bracketsArray.push(-3);
-    }
+        if (split[i] === ']') bracketsArray.push(-3);}
     if (bracketsArray.length <= 1) return false;
     if (bracketsArray[0] < 0) return false;
-
     const stack = new Stack();
-
     for (let i = 0; i <  bracketsArray.length; i++) {
         let bracket = bracketsArray.shift();
-        // console.log('before', stack.top)
         if (!stack.top) {
             stack.push(bracket);
         } else if (bracket > 0) {
@@ -33,9 +28,7 @@ function bracket(string) {
         } else {
             return false;
         }
-        // console.log('after', stack.top)
-    }
-    return true;
+    }return true;
 }
 let x = bracket('{(})');
 let y = bracket('}');
