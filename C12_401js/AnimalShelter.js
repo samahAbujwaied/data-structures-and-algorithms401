@@ -6,7 +6,6 @@ class AnimalShelter {
         this.prefCat = new Queue();
         this.prefDogs = new Queue();
     }
-
     enqueue(animal) {
         if (animal.type === 'cat') {
             this.prefCat.enqueue(animal);
@@ -14,35 +13,19 @@ class AnimalShelter {
             this.prefDogs.enqueue(animal);
 
         } else {
-            return 'Sorry shoud be dog or cat ...!';
-        }
-    }
-
+            return 'Sorry shoud be dog or cat ...!';  }}
     dequeue(pref) {
-
         if (pref === 'cat') {
-
             if (!this.prefCat.isEmpty()) {
-
                 return this.prefCat.dequeue(pref);
-
             } else {
                 return 'empty .....!';
             }
         } else if (pref === 'dog') {
 
-            if (!this.prefDogs.isEmpty()) {
-
-                return this.prefDogs.dequeue(pref);
-
-
-            } else {
-
+            if (!this.prefDogs.isEmpty()) { return this.prefDogs.dequeue(pref); } else {
                 return 'empty .....!';
-            }
-        } else {
-
-
+            }} else {
             return null;
         }
 
