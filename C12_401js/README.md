@@ -21,5 +21,5 @@ npm run test
 
 ##### Whiteboard :
 
-![whiteboard](../C12_401js/img/animal.png)
-![test](../C12_401js/img/uml.png)
+![whiteboard](./img/animal.png)
+![test](./img/test.png)
