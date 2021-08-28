@@ -15,13 +15,13 @@ describe('zip linked list', () => {
     const linkedlist2 = new LinkedList();
     const linkedlist13 = new LinkedList();
   
-    //////////////////////////////////////////////////////
+
     linkedlist1.insert(1);
     linkedlist1.insert(2);
-    //////////////////////////////////////////////////////
+
     linkedlist2.insert(3);
     linkedlist2.insert(4);
-    //////////////////////////////////////////////////////
+    
     linkedlist13.insert(1);
     linkedlist13.insert(3);
     linkedlist13.insert(2);
@@ -33,21 +33,21 @@ describe('zip linked list', () => {
     const linkedlist1 = new LinkedList();
     const linkedlist2 = new LinkedList();
     const linkedlist13 = new LinkedList();
-     //////////////////////////////////////////////////////
+   
 
     linkedlist1.insert(1);
     linkedlist1.insert(2);
-     //////////////////////////////////////////////////////
+    linkedlist1.insert(5);
 
     linkedlist2.insert(3);
     linkedlist2.insert(4);
-     //////////////////////////////////////////////////////
-
+ 
     linkedlist13.insert(1);
     linkedlist13.insert(3);
     linkedlist13.insert(2);
     linkedlist13.insert(4);
-     //////////////////////////////////////////////////////
+    linkedlist13.insert(5);
+     
 
   
 
@@ -57,18 +57,20 @@ describe('zip linked list', () => {
     const linkedlist1 = new LinkedList();
     const linkedlist2 = new LinkedList();
     const linkedlist13 = new LinkedList();
-    //////////////////////////////////////////////////////
+   
     linkedlist1.insert(1);
     linkedlist1.insert(2);
-    //////////////////////////////////////////////////////
+    
     linkedlist2.insert(3);
     linkedlist2.insert(4);
-    ////////////////////////////////////////////////////// 
+    linkedlist2.insert(5);
+
     linkedlist13.insert(1);
     linkedlist13.insert(3);
     linkedlist13.insert(2);
     linkedlist13.insert(4);
-     //////////////////////////////////////////////////////
+    linkedlist13.insert(5);
+
     expect(zipList(linkedlist1, linkedlist2).toString()).toEqual(linkedlist13.toString());
   });
 });
