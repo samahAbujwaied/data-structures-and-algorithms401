@@ -1,11 +1,12 @@
-# Trees
 
-## Challenge
-using tree non-linier algorithim we can sort the nood using three approuch , preorder , inorder , postordar , to make the node easy to search and move on any node we need.
+# Challenge Summary
+Find the maximum value stored in the tree. 
 
+## Whiteboard Process
+![](../C16_401js/img/Umlfindmax.png)
 
 ## Approach & Efficiency
-new class to add node and method to search on spisific node 
-## API
-<!-- Description of each method publicly available in each of your trees -->
-![](https://algs4.cs.princeton.edu/32bst/images/bst-search.png)
+O(1) space and time 
+
+## Solution
+![](../C16_401js/img/maxtree.png)
