@@ -103,22 +103,5 @@ class LinkedList {
   }
 
 }
-const ll = new LinkedList();
-console.log('ll--------->befor',ll.toString());
-ll.insert(2);
-ll.insert(3);
-ll.insert(4);
-console.log('ll--------->after',ll.toString());
-ll.append(5);
-console.log('ll--------->after2',ll.toString());
-const inc = ll.include(3);
-console.log('inc 111111', inc); 
-const inc2 = ll.include(1);
-console.log('inc 111111', inc2); 
-const inaf = ll.insertAfter(5,8)
-console.log('ll--------->after3',ll.toString());
-ll.insertBefore(8,7)
-console.log('ll--------->after4',ll.toString());
-ll.kthFromEnd(0);
-console.log('ll--------->after5',ll.toString());
+
 module.exports = LinkedList;

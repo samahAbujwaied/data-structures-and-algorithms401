@@ -1,4 +1,10 @@
+# Challenge Summary
+Write a function called validate brackets
 
-##### test:
+## Whiteboard Process
+![](./img/uml.png)
 
-![test](../C13_401js/img/pracket.png)
+## Approach & Efficiency
+using a function and new array to solve the proplem mathmaticaly 
+## Solution
+![test](./img/pracket.png)
