@@ -4,38 +4,56 @@ class BinaryTree {
     constructor(root = null) {
         this.root = root;
     }
-    fizzBuzzTree (root) {
 
-        const result = [];
-        const q = [root];
-        if(root){
-            while (q.length > 0) {
-                let cur = q.shift();
-                {
-                    if( cur.value%15===0)
-                    result.push('fizzBuzz'); 
-                    else if(cur.value%5==0)
-                    result.push('Buzz');
-                    else if (cur.value%3==0 ){
-                        result.push('fizz')
+    fizzBuzzTree(tree) {
+        console.log(tree);
+        const result =[];
+            
+                
+                   let FBT = (node) => {
+                if(tree){  
+                  if (node.left) 
+                  {  
+                      FBT(node.left); }
+              
+                  if (node.value % 15 === 0) 
+                  { node.value = 'FizzBuzz'; 
+                    result.push('FizzBuzz')
+                }
+                  else if (node.value % 5 === 0) {
+                       node.value = 'Buzz';
+                       result.push('Buzz')
+                     }
+                  else if (node.value % 3 === 0) {
+                       node.value = 'Fizz'; 
+                       result.push('Fizz')
                     }
-                    else { result.push(cur.value)}
-    
+                    else{
+                        result.push(node.value) 
+                    }
+
+                    if (node.right) { 
+                   
+                        FBT(node.right); }
+                      
+                      };
+              
                 }
                
-                if (cur.left)
-                    q.push(cur.left)
-                if (cur.right)
-                    q.push(cur.right)
+              
+                 
+                FBT(tree);
+                if(result)
+                return result ;
+                
+            
+              };
         
-            }
-            return result
-    
         }
-        else return 'Sorry there is no root';
-    }
+        
+        
     
-}
+
 
 let one = new Node(2);
 let two = new Node(7);
