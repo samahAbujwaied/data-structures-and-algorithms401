@@ -1,13 +1,28 @@
 'use strict'
 
-let array = [8,4,23,42,16,15];
+function quickSort(array, left, right) {
+    //[8,4,23,42,16,15];
+    let index;
+    if (array.length > 1) {
+        index = partition(array, left, right);
+        if (left < index - 1) { 
+            quickSort(array, left, index - 1);
+        }
+        if (index < right) {
+            quickSort(array, index, right);
+        }
+    }
+    return array;
+}
 function swap(array, leftIndex, rightIndex){
-    var temp = array[leftIndex];
+    let temp = array[leftIndex];
     array[leftIndex] = array[rightIndex];
     array[rightIndex] = temp;
 }
+
+
 function partition(array, left, right) {
-    let pivot = array[Math.floor((right + left) / 2)], 
+    let  pivot = array[Math.floor((right + left) / 2)], 
         i = left,
         j = right; 
     while (i <= j) {
@@ -26,20 +41,8 @@ function partition(array, left, right) {
     return i;
 }
 
-function quickSort(array, left, right) {
-    let index;
-    if (array.length > 1) {
-        index = partition(array, left, right);
-        if (left < index - 1) { 
-            quickSort(array, left, index - 1);
-        }
-        if (index < right) {
-            quickSort(array, index, right);
-        }
-    }
-    return array;
-}
 
+let array = [8,4,23,42,16,15];
 let sortedArray = quickSort(array, 0, array.length - 1);
 console.log(sortedArray);
 
