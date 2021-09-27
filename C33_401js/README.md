@@ -1,11 +1,15 @@
 # Challenge Summary
 <!-- Description of the challenge -->
-Reapeted word on hash table
+**Implement a simplified LEFT JOIN for 2 Hashmaps.**
+
 ## Whiteboard Process
-![](./img/repeatedUML.png)
+
+![](./img/leftjoinUML.png)
 
 ## Approach & Efficiency
-O(n^2) time and space
+
+**O(n) time and space**
+
 ## Solution
-![](./img/repeated.png)
+![](./img/leftjointest.png)
 <!-- Show how to run your code, and examples of it in action -->
