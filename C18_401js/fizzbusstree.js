@@ -8,8 +8,6 @@ class BinaryTree {
     fizzBuzzTree(tree) {
         console.log(tree);
         const result =[];
-            
-                
                    let FBT = (node) => {
                 if(tree){  
                   if (node.left) 
@@ -36,19 +34,14 @@ class BinaryTree {
                    
                         FBT(node.right); }
                       
-                      };
-              
+                      }; 
                 }
                
-              
-                 
                 FBT(tree);
                 if(result)
                 return result ;
                 
-            
-              };
-        
+              }; 
         }
         
         

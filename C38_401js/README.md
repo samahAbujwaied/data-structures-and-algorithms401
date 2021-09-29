@@ -1,11 +1,12 @@
 # Challenge Summary
 <!-- Description of the challenge -->
-Reapeted word on hash table
-## Whiteboard Process
-![](./img/repeatedUML.png)
+- Conduct a depth first preorder traversal on a graph
 
-## Approach & Efficiency
-O(n^2) time and space
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![](../C38_401js/img/dfsUML.png)
+
 ## Solution
-![](./img/repeated.png)
 <!-- Show how to run your code, and examples of it in action -->
+![](../C38_401js/img/dfsTest.png)
+

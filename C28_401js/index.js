@@ -23,8 +23,11 @@ function swap(array, leftIndex, rightIndex){
 
 function partition(array, left, right) {
     let  pivot = array[Math.floor((right + left) / 2)], 
+  
         i = left,
         j = right; 
+        console.log('floor', Math.floor((right + left)/2));
+        console.log('ceil',Math.ceil((right + left)/2));
     while (i <= j) {
         while (array[i] < pivot) {
             i++;

@@ -88,7 +88,6 @@ const Node = require('./node')
         }
         return current.data;
     
-  
     
   }
   
