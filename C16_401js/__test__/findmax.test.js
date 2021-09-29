@@ -65,6 +65,7 @@ describe("Binary Search Tree", () => {
 
   it("find Max number happy path ",()=>{
     let bst=new BinaryTree();
+    bst.add(50);
     bst.add(9);
     bst.add(4);
     bst.add(17);
@@ -73,7 +74,7 @@ describe("Binary Search Tree", () => {
     bst.add(22);
     bst.add(5);
     bst.add(7);
-    bst.add(50);
+  
     expect(bst.findMax()).toEqual(50);
   })
   

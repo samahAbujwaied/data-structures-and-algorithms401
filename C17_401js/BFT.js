@@ -48,7 +48,7 @@ const BF = (root) => {
     const q = [root];
     console.log('======', q);
     if(root){
-console.log('in if');
+     console.log('in if');
         while (q.length > 0) {
             console.log('lennn', q.length);
             let cur = q.shift();
